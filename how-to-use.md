@@ -8,3 +8,4 @@
   ```
   mvn clean install
   ```
+  - You would see "BUILD SUCCESSFUL" if your build is success.
