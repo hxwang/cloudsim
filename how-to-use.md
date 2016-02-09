@@ -8,4 +8,5 @@
   ```
   mvn clean install
   ```
-  - You would see "BUILD SUCCESSFUL" if your build is success.
+  - You would see "BUILD SUCCESSFUL" if your build is successful.
+- Step 4: Import the project into Eclipse, selecting `File -> Import -> Maven -> Existing Maven Projects`
