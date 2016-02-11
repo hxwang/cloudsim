@@ -55,21 +55,26 @@
 - Predictaes are used for selecting events from the deferred queue.
 - This ia an abstract class and must be extended to create a new predicate.
 
-  ### `PredicateAny`
+  #### `PredicateAny`
   - This class represents a predicate that matches any event on the deferred event queue. 
   - There is a publicly accessible instance of this predicae in the CloudSim class, called `CloundSim.SIM_ANY`, and hence no new instances need to be created.
   
-  ### `PredicateFrom`
+  #### `PredicateFrom`
   - This class represents a predicate that selects events fired by specific entities.
   
-  ### `PredicateNone`
+  #### `PredicateNone`
   - This represents a predicate that does not match any event on the deferred event queue. There is a publicly accessible statis instance of this predicate in the CloudSim class, called `CloudSim.SIM_NONE`; hence, the users are not needed to create new instances of this class.
   
-  ### `PredicateNotFrom`
+  #### `PredicateNotFrom`
   - This class represetns a predicate that selects events that have not beeen sent to specific entities.
   
-  ### `PredicateNotType`
+  #### `PredicateNotType`
   - This class represents a predicate to select events that do not match specific tags.
+  
+  ### `PredicateType`
+  - This class represents a predicate to select events with specific tags.
+  
+
 
 
 
