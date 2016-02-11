@@ -1,3 +1,3 @@
 ## Simulation flow
 
-![](../figs/data_flow.JPG)
+![](./figs/data_flow.JPG)
