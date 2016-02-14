@@ -114,7 +114,8 @@ public class CloudSimExample1 {
 
 			// Cloudlet properties
 			int id = 0;
-			long length = 400000;
+			// long length = 400000;
+			long length = 4000;
 			long fileSize = 300;
 			long outputSize = 300;
 			UtilizationModel utilizationModel = new UtilizationModelFull();

@@ -525,31 +525,26 @@ public class CloudSim {
 		}
 				
 		// If there are more future events then deal with them
-		if (future.size() > 0) {
-			List<SimEvent> toRemove = new ArrayList<SimEvent>();
-			Iterator<SimEvent> fit = future.iterator();
-			queue_empty = false;
-			SimEvent first = fit.next();
-			processEvent(first);
-			future.remove(first);
-
-			fit = future.iterator();
-
-			// Check if next events are at same time...
-			boolean trymore = fit.hasNext();
-			while (trymore) {
-				SimEvent next = fit.next();
-				if (next.eventTime() == first.eventTime()) {
-					processEvent(next);
-					toRemove.add(next);
-					trymore = fit.hasNext();
-				} else {
-					trymore = false;
-				}
-			}
-
-			future.removeAll(toRemove);
-
+		if (future.size() > 0) {		  		 
+  			List<SimEvent> toRemove = new ArrayList<SimEvent>();
+  			Iterator<SimEvent> fit = future.iterator();
+  			queue_empty = false;
+  			SimEvent first = fit.next();
+  			processEvent(first);  			
+  			future.remove(first);    			
+  
+  			// Check if next events are at same time...
+  			fit = future.iterator();
+  			while (fit.hasNext()) {
+  				SimEvent next = fit.next();
+  				if (next.eventTime() == first.eventTime()) {
+  					processEvent(next);
+  					future.remove(next);
+  					fit = future.iterator();
+  				} else {
+  					break;
+  				}
+  			}  	
 		} else {
 			queue_empty = true;
 			running = false;
