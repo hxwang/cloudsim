@@ -10,3 +10,6 @@
   ```
   - You would see "BUILD SUCCESSFUL" if your build is successful.
 - Step 4: Import the project into Eclipse, selecting `File -> Import -> Maven -> Existing Maven Projects`
+
+### Details
+- Create VM with delay: [ref](https://nikolaygrozev.wordpress.com/tag/cloudsim/)
